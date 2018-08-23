@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element label="Date" max_length="40" name="date" type="glide_date"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element choice="1" label="State" max_length="30" name="state" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Complete" value="Complete"/>
+                <element inactive_on_update="false" label="In-Progress" value="In-Progress"/>
+                <element inactive_on_update="false" label="Open" value="Open"/>
+            </choice>
+        </element>
+        <element label="Requested for" max_length="32" name="u_reference_1" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="u_reference_1"/>
+        </index>
+    </element>
+</database>
